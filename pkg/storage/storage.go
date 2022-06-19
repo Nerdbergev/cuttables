@@ -1,34 +1,34 @@
 package storage
 
 type Cuttable struct {
-	ID          int    `sql:"cuttable_id"`
-	Name        string `sql:"cuttable_name"`
-	Creator     int    `sql:"cuttable_creator"`
-	ParentID    int    `sql:"cuttable_parent_id"`
-	Description string `sql:"cuttable_description"`
-	License     int    `sql:"cuttable_license"`
-	Data        []byte `sql:"cuttable_data"`
+	ID          int    `sql:"id"`
+	Name        string `sql:"name"`
+	Creator     int    `sql:"creator"`
+	ParentID    int    `sql:"parent_id"`
+	Description string `sql:"description"`
+	License     int    `sql:"license"`
+	Data        []byte `sql:"data"`
 }
 
 type User struct {
-	ID       int    `sql:"user_id"`
-	Name     string `sql:"user_name"`
-	Password string `sql:"user_password"`
-	Salt     string `sql:"user_salt"`
-	Email    string `sql:"user_email"`
+	ID       int    `sql:"id"`
+	Name     string `sql:"name"`
+	Password string `sql:"password"`
+	Salt     string `sql:"salt"`
+	Email    string `sql:"email"`
 }
 
 type License struct {
-	ID   int    `sql:"license_id"`
-	Name string `sql:"license_name"`
-	Text string `sql:"license_text"`
+	ID   int    `sql:"id"`
+	Name string `sql:"name"`
+	Text string `sql:"text"`
 }
 
 type File struct {
-	ID         int    `sql:"file_id"`
-	CuttableID int    `sql:"file_cuttable_id"`
-	Type       int    `sql:"file_type"`
-	Data       []byte `sql:"file_data"`
+	ID         int    `sql:"id"`
+	CuttableID int    `sql:"cuttable_id"`
+	Type       int    `sql:"type"`
+	Data       []byte `sql:"data"`
 }
 
 type CuttableStorage interface {
